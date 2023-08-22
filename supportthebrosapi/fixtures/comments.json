@@ -1,0 +1,42 @@
+[
+  {
+    "model": "supportthebrosapi.comment",
+    "pk": 1,
+    "fields": {
+      "post_id": 1,
+      "comment_content" ,
+      "created_on": ,
+      "uid": 
+    }
+  },
+  {
+    "model": "supportthebrosapi.comment",
+    "pk": 2,
+    "fields": {
+      "post_id": 1,
+      "comment_content" ,
+      "created_on": ,
+      "uid": 
+    }
+  },
+  {
+    "model": "supportthebrosapi.comment",
+    "pk": 3,
+    "fields": {
+      "post_id": 1,
+      "comment_content" ,
+      "created_on": ,
+      "uid": 
+    }
+  },
+  {
+    "model": "supportthebrosapi.comment",
+    "pk": 4,
+    "fields": {
+      "post_id": 1,
+      "comment_content" ,
+      "created_on": ,
+      "uid": 
+    }
+  },
+]
