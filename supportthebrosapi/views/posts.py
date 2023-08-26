@@ -39,10 +39,10 @@ class PostView(ViewSet):
 
         post = Post.objects.create(
             title=request.data["title"],
-            postt_image=request.data["post_image"],
+            post_image=request.data["post_image"],
             post_content=request.data["post_content"],
             goal=request.data["goal"],
-            created_one=datetime.now(),
+            created_on=datetime.now(),
             uid=request.data["uid"]
         )
         serializer = PostSerializer(post)
@@ -60,7 +60,7 @@ class PostView(ViewSet):
         post.post_image=request.data["post_image"],
         post.post_content=request.data["post_content"],
         post.goal=request.data["goal"],
-        post.created_one=datetime.now(),
+        post.created_on=datetime.now(),
         post.uid=request.data["uid"]
         post.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
