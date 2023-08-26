@@ -1,0 +1,64 @@
+[
+  {
+    "model": "supportthebrosapi.tag",
+    "pk": 1,
+    "fields":{
+      "title": "Health"
+    }
+  },
+  {
+    "model": "supportthebrosapi.tag",
+    "pk": 2,
+    "fields":{
+      "title": "Finance"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 3,
+    "fields":{
+      "title": "Education"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 4,
+    "fields":{
+      "title": "Disaster Relief"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 5,
+    "fields":{
+      "title": "Animals"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 6,
+    "fields":{
+      "title": "Environment"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 7,
+    "fields":{
+      "title": "Art"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 8,
+    "fields":{
+      "title": "Homelessness"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 9,
+    "fields":{
+      "title": "Food"
+    }
+  },  {
+    "model": "supportthebrosapi.tag",
+    "pk": 10,
+    "fields":{
+      "title": "Politics"
+    }
+  }
+]
