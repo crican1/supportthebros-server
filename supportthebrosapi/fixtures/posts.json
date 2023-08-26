@@ -1,0 +1,122 @@
+[
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 1,
+    "fields": {
+      "title": "Help Save Lives: Medical Supplies for Rural Clinics",
+      "post_image": "https://www.healthcareitnews.com/sites/hitn/files/110719%20Rolling%20Plains%20Rural%20Health%20Clinic%20712.jpg",
+      "post_content": "In remote areas around the world, access to proper medical care is limited due to a lack of essential supplies. This fundraiser aims to provide crucial medical equipment and supplies to rural clinics, ensuring that healthcare professionals can deliver quality care to those in need. Your contribution will help purchase items like syringes, bandages, medications, and diagnostic tools, ultimately saving lives and improving the health of underserved communities.",
+      "goal": 50000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 2,
+    "fields": {
+      "title": "Empower Dreams: Scholarships for Underprivileged Students",
+      "post_image": "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/POLL/gmi0crgjoemeexi839owug.jpg",
+      "post_content": "Education is a powerful tool that can transform lives, but many bright and deserving students from low-income backgrounds struggle to access quality education. This GoFundMe seeks to provide scholarships for underprivileged students, enabling them to pursue their dreams and achieve academic success. Your support will help cover tuition fees, books, and other educational expenses, allowing these students to break the cycle of poverty and build a better future for themselves.",
+      "goal": 100000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 3,
+    "fields": {
+      "title": "Rebuilding Homes: Disaster Relief for Affected Families",
+      "post_image": "https://www.cdc.gov/disasters/images/flood-feature-banner.jpg",
+      "post_content": "Natural disasters can devastate communities, leaving families homeless and vulnerable. This fundraiser aims to provide relief to those affected by disasters by assisting in rebuilding their homes and lives. Your donation will help provide shelter, basic necessities, and emotional support to families who have lost everything, offering them a chance to recover and start anew.",
+      "goal": 250000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 4,
+    "fields": {
+      "title":  "Furry Friends in Need: Animal Shelter Support",
+      "post_image": "https://media.4-paws.org/6/3/1/f/631f8b7e6e4772c6350b660a9b871be32b51212f/VIER%20PFOTEN_2016-09-18_081-1927x1333-1920x1328.webp",
+      "post_content": "Animal shelters play a vital role in caring for abandoned and neglected pets. This campaign seeks to support animal shelters by providing funds for food, medical care, and shelter improvements. Your contribution will directly impact the lives of these furry friends, giving them a chance at finding loving forever homes and receiving the care they deserve.",
+      "goal": 50000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 5,
+    "fields": {
+      "title": "Clean Water for All: Sustainable Water Projects",
+      "post_image": "https://healingwaters.org/wp-content/uploads/2021/02/how-to-define-clean-900x490.jpg",
+      "post_content": "Access to clean and safe drinking water is a fundamental human right, yet millions around the world lack this basic necessity. This GoFundMe aims to support sustainable water projects that provide communities with reliable access to clean water sources. Your support will help build wells, water purification systems, and infrastructure that can make a significant difference in the health and well-being of communities in need.",
+      "goal": 100000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 6,
+    "fields": {
+      "title": "Preserving Our Planet: Reforestation and Conservation Efforts",
+      "post_image": "https://res.cloudinary.com/drt2tlz1j/image/upload/c_scale,w_848,h_416,dpr_2/f_auto,q_auto/v1675888910/fn1/global-government-tree-planting.jpg?_i=AA",
+      "post_content": "Our planet's ecosystems are facing unprecedented challenges due to deforestation and environmental degradation. This fundraiser is dedicated to supporting reforestation and conservation initiatives that protect biodiversity and combat climate change. By contributing, you'll be directly involved in planting trees, restoring habitats, and preserving the natural beauty of our world for future generations.",
+      "goal": 25000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 7,
+    "fields": {
+      "title": "Healing through Art: Art Therapy for Trauma Survivors",
+      "post_image": "https://www.psychologs.com/wp-content/uploads/2023/05/Impact-of-Expressive-Arts-Therapy-on-Mental-Health.jpg",
+      "post_content": "Art has the power to heal and transform, especially for individuals who have experienced trauma. This campaign aims to provide art therapy programs for trauma survivors, offering them a creative outlet to express their feelings, process their experiences, and find healing. Your support will enable these individuals to embark on a journey of recovery and self-discovery through the therapeutic benefits of art.",
+      "goal": 5000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 8,
+    "fields": {
+      "title": "Wheels of Independence: Mobility Aids for People with Disabilities",
+      "post_image": "https://shower-buddy.com/wp-content/uploads/2023/05/showerbuddy-blog-useful-mobility-aids-walker.jpg",
+      "post_content": "For individuals with disabilities, mobility aids such as wheelchairs and prosthetics are essential for independence and participation in daily life. This GoFundMe seeks to provide these aids to people who need them, allowing them to move freely, engage with their communities, and lead fulfilling lives. Your donation will make a tangible difference in enhancing the quality of life for individuals with disabilities.",
+      "goal": 15000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 9,
+    "fields": {
+      "title": "Nurturing Young Minds: Early Childhood Education Centers",
+      "post_image": "https://www.nea.org/sites/default/files/styles/1920wide/public/2022-01/Kindergarten_classroom.jpg?itok=4kD_hzQw",
+      "post_content": "Early childhood education lays the foundation for a child's lifelong learning journey. This fundraiser is dedicated to establishing and supporting early childhood education centers in underserved communities. Your contribution will help create safe and stimulating environments where young children can develop essential skills, receive proper nutrition, and access educational resources that set them up for a successful future.",
+      "goal": 10000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.post",
+    "pk": 10,
+    "fields": {
+      "title": "Honoring Veterans: Support for Homeless Veterans",
+      "post_image": "https://cdn.kingcounty.gov/-/media/elected/executive/constantine/news/graphics/Homeless_veterans.ashx?la=en&hash=725F1D4EBE54160BF27680F3CB82DF61",
+      "post_content": "Many veterans who have served their countries face challenges upon returning home, including homelessness. This campaign aims to provide assistance to homeless veterans by offering shelter, counseling, job training, and essential resources to help them reintegrate into society. Your support will show gratitude for their service and provide them with the help they need to regain stability and dignity in their lives.",
+      "goal": 75000,
+      "created_on": "2023-02-23",
+      "uid": 1
+    }
+  }
+]

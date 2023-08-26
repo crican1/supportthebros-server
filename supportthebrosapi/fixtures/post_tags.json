@@ -1,0 +1,82 @@
+[
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 1,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id":1
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 2,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id":3
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 3,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id":4
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 4,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 5
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 5,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 6
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 6,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 6
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 7,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 7
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 8,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 1
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 9,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 3
+    }
+  },
+  {
+    "model": "supportthebrosapi.posttag",
+    "pk": 10,
+    "fields": {
+      "organizer_post_id": 1,
+      "tag_id": 8
+    }
+  }
+]
