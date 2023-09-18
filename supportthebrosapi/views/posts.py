@@ -3,7 +3,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from supportthebrosapi.models import Post
+from supportthebrosapi.models import Post, Tag
 
 class PostView(ViewSet):
     """Supportthebros posts view"""
@@ -27,6 +27,7 @@ class PostView(ViewSet):
             Response -- JSON serialized list of posts
         """
         post = Post.objects.all()
+
         serializer = PostSerializer(post, many=True)
         return Response(serializer.data)
 
@@ -36,13 +37,15 @@ class PostView(ViewSet):
         Returns
         Response -- JSON serialized Post instance
         """
+        tag_id = Tag.objects.get(pk=request.data["tagId"])
 
         post = Post.objects.create(
             title=request.data["title"],
-            post_image=request.data["post_image"],
-            post_content=request.data["post_content"],
+            post_image=request.data["postImage"],
+            post_content=request.data["postContent"],
             goal=request.data["goal"],
             created_on=datetime.now(),
+            tag_id=tag_id,
             uid=request.data["uid"]
         )
         serializer = PostSerializer(post)
@@ -54,14 +57,15 @@ class PostView(ViewSet):
         Returns:
         Response -- Empty body with 204 status code
         """
+        tag_id = Tag.objects.get(pk=request.data["tagId"])
 
         post = Post.objects.get(pk=pk)
-        post.title=request.data["title"],
-        post.post_image=request.data["post_image"],
-        post.post_content=request.data["post_content"],
-        post.goal=request.data["goal"],
-        post.created_on=datetime.now(),
-        post.uid=request.data["uid"]
+        post.title=request.data["title"]
+        post.post_image=request.data["postImage"]
+        post.post_content=request.data["postContent"]
+        post.goal=request.data["goal"]
+        post.tag_id=tag_id
+        post.created_on=datetime.now()
         post.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
@@ -75,7 +79,9 @@ class PostView(ViewSet):
 class  PostSerializer(serializers.ModelSerializer):
     """JSON serializer for posts
     """
+
+    created_on = serializers.DateTimeField(format="%B %d, %Y, %I:%M%p")
     class Meta:
         model = Post
-        fields = ('id', 'title', 'post_image', 'post_content', 'goal', 'created_on', 'uid')
-        depth = 1
+        fields = ('id', 'title', 'post_image', 'post_content', 'goal', 'created_on', 'tag_id', 'uid')
+        depth = 6

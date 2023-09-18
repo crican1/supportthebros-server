@@ -25,24 +25,30 @@ class UserView(ViewSet):
 
     def create(self, request):
         """POST request to create a rare user"""
-        uid=request.data["uid"]
-        name=request.data["name"]
-        profile_image_url=request.data["profile_image_url"]
-        email=request.data["email"]
+
+        user = User.objects.create(
+          first_name=request.data["first_name"],
+          last_name=request.data["last_name"],
+          profile_image_url=request.data["profile_image_url"],
+          email=request.data["email"],
+          registered_organizer=request.data["registered_organizer"],
+          uid=request.data["uid"]
+        )
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(uid=uid)
+        serializer = UserSerializer(user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
         """PUT request to update a rare user"""
         user = User.objects.get(pk=pk)
-        uid=request.data.get("uid", user.uid)
-        name=request.data.get("name", user.name)
-        profile_image_url=request.data["profile_image_url"]
-        email=request.data["email"]
-        user.uid = uid
-        user.name = name
+        user.uid=request.data.get("uid", user.uid)
+        user.first_name=request.data["first_name"]
+        user.last_name=request.data["last_name"]
+        user.profile_image_url=request.data["profile_image_url"]
+        user.email=request.data["email"]
+        user.registered_organizer=request.data["registered_organizer"],
+        user.uid = request.data["uid"]
         user.save()
         return Response({'message': 'User Updated'}, status=status.HTTP_204_NO_CONTENT)
 
@@ -57,5 +63,6 @@ class  UserSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = User
-        fields = ('id', 'first_name', 'last_name', 'profile_image_url', 'email', 'uid')
-        depth = 1
+        fields = ('id', 'first_name',
+                  'last_name', 'profile_image_url', 'email', 'registered_organizer', 'uid')
+        depth = 5

@@ -15,7 +15,7 @@ class TagView(ViewSet):
         """
         try:
             tag = Tag.objects.get(pk=pk)
-            serializer = PostSerializer(tag)
+            serializer = TagSerializer(tag)
             return Response(serializer.data)
         except Tag.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)

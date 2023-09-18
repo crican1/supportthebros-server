@@ -6,4 +6,5 @@ class User(models.Model):
     last_name = models.CharField(max_length=50)
     profile_image_url = models.URLField()
     email = models.CharField(max_length=50)
+    registered_organizer = models.BooleanField(null=True, blank=True)
     uid = models.CharField(max_length=100)
