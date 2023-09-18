@@ -25,7 +25,9 @@ class PostTagView(ViewSet):
         Returns:
             Response -- JSON serialized list of post_tags
         """
-        post_tag = PostTag.objects.all()
+        organizer_post_id = request.query_params.get('organizerPostId', None)
+
+        post_tag = PostTag.objects.all().filter(organizer_post_id=organizer_post_id)
 
         serializer = PostTagSerializer(post_tag, many=True)
         return Response(serializer.data)
@@ -36,8 +38,8 @@ class PostTagView(ViewSet):
         Returns
             Response -- JSON serialized post_tag instance
         """
-        organizer_post_id = Post.objects.get(pk=request.data["organizer_post_id"])
-        tag_id = Tag.objects.get(pk=request.data["tag_id"])
+        organizer_post_id = Post.objects.get(pk=request.data["organizerPostId"])
+        tag_id = Tag.objects.get(pk=request.data["tagId"])
 
         post_tag = PostTag.objects.create(
             organizer_post_id=organizer_post_id,
@@ -47,16 +49,44 @@ class PostTagView(ViewSet):
         serializer = PostTagSerializer(post_tag)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    def destroy(self, request, pk):
-        """Delete post_tags
+    def update(self, request, pk):
+        """Handles PUT requests for post tags
+
+        Returns:
+            Response -- Empty body with 204 status code
         """
         post_tag = PostTag.objects.get(pk=pk)
-        post_tag.delete()
+        organizer_post_id = Post.objects.get(pk=request.data["organizerPostId"])
+        tag_id = Tag.objects.get(pk=request.data["tagId"])
+
+        post_tag.organizer_post_id = organizer_post_id
+        post_tag.tag_id = tag_id
+        post_tag.save()
+
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    def destroy(self, request, pk):
+        """Handles DELETE requests for post tags
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        organizer_post_id = Post.objects.get(pk=pk)
+        tag_id = request.query_params.get('tag_id', None)
+        if tag_id is not None:
+            # Filter the PostTag instances for the matching organizer_post_id and tag_id
+            post_tag = PostTag.objects.get(organizer_post_id_id=organizer_post_id, tag_id=tag_id)
+
+            if post_tag:
+                # Delete the first matching post_tag instance
+                post_tag.delete()
+                return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+        return Response({"detail": "SessionEngineer not found"}, status=status.HTTP_404_NOT_FOUND)
 
 class PostTagSerializer(serializers.ModelSerializer):
     """JSON serializer for post_tags"""
     class Meta:
         model = PostTag
         fields = ('id', 'organizer_post_id', 'tag_id')
-        depth = 1
+        depth = 3

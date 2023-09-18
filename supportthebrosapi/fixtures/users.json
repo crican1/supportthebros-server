@@ -1,0 +1,13 @@
+[
+  {
+    "model": "supportthebrosapi.user",
+    "pk": 1,
+    "fields": {
+      "first_name": "Danny",
+      "last_name": "Villalobos",
+      "profile_image_url": "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1200/https://puppyintraining.com/wp-content/uploads/Miniature-Australian-Shepherd.jpg",
+      "email": "user@gmail.com",
+      "uid": 1
+    }
+  }
+]
