@@ -24,9 +24,9 @@
     "pk": 3,
     "fields": {
       "post_id": 1,
-      "comment_content" ,
-      "created_on": ,
-      "uid": 
+      "comment_content": "Here is a comment for the fisrt post",
+      "created_on": "2023-02-23",
+      "uid": 1
     }
   },
   {
@@ -34,9 +34,9 @@
     "pk": 4,
     "fields": {
       "post_id": 1,
-      "comment_content" ,
-      "created_on": ,
-      "uid": 
+      "comment_content": "Here is a second comment for the first post.",
+      "created_on": "2023-02-23",
+      "uid": 1
     }
-  },
+  }
 ]
