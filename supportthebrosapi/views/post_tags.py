@@ -39,12 +39,17 @@ class PostTagView(ViewSet):
             Response -- JSON serialized post_tag instance
         """
         organizer_post_id = Post.objects.get(pk=request.data["organizerPostId"])
-        tag_id = Tag.objects.get(pk=request.data["tagId"])
 
-        post_tag = PostTag.objects.create(
-            organizer_post_id=organizer_post_id,
-            tag_id=tag_id,
-        )
+        print(request.data["tagIds"])
+
+        for x in request.data["tagIds"]:
+
+            tag_id = Tag.objects.get(pk=x)
+
+            post_tag = PostTag.objects.create(
+                organizer_post_id=organizer_post_id,
+                tag_id=tag_id,
+            )
 
         serializer = PostTagSerializer(post_tag)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -55,9 +60,13 @@ class PostTagView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
+
         post_tag = PostTag.objects.get(pk=pk)
+
         organizer_post_id = Post.objects.get(pk=request.data["organizerPostId"])
-        tag_id = Tag.objects.get(pk=request.data["tagId"])
+        tag_id = Tag.objects.get(pk=request.data["tagIds"])
+
+        print(request.data["tagIds"])
 
         post_tag.organizer_post_id = organizer_post_id
         post_tag.tag_id = tag_id
@@ -71,18 +80,11 @@ class PostTagView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        organizer_post_id = Post.objects.get(pk=pk)
-        tag_id = request.query_params.get('tag_id', None)
-        if tag_id is not None:
-            # Filter the PostTag instances for the matching organizer_post_id and tag_id
-            post_tag = PostTag.objects.get(organizer_post_id_id=organizer_post_id, tag_id=tag_id)
 
-            if post_tag:
-                # Delete the first matching post_tag instance
-                post_tag.delete()
-                return Response(None, status=status.HTTP_204_NO_CONTENT)
+        post_tag = PostTag.objects.get(pk=pk)
+        post_tag.delete()
 
-        return Response({"detail": "SessionEngineer not found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class PostTagSerializer(serializers.ModelSerializer):
     """JSON serializer for post_tags"""
